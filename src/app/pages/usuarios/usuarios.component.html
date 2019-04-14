@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<div class="container mt-2">
+    <div class="row">
+        <div class="offset-2 col-8">
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Eliminar</th>
+                        <th>Actualizar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let usuario of usuarios">
+                        <td> {{usuario.nombre}} </td>
+                        <td> {{usuario.email}} </td>
+                        <td><button class="btn btn-danger" (click)="borrar(usuario._id)">Borrar</button></td>
+                        <td><button class="btn btn-info" (click)="actualiza(usuario._id)">Modificar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
